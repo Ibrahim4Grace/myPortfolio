@@ -22,11 +22,29 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
-app.use(session({
-secret: process.env.SESSION_SECRET,
-resave: false,
-saveUninitialized: true,
-}));
+if (process.env.NODE_ENV === 'production') {
+  // Use a placeholder store for production (replace it with a suitable store)
+  const MemoryStore = require('memorystore')(session);
+  app.use(
+    session({
+      secret: process.env.SESSION_SECRET,
+      resave: false,
+      saveUninitialized: true,
+      store: new MemoryStore({
+        checkPeriod: 86400000, // Prune expired entries every 24h
+      }),
+    })
+  );
+} else {
+  // Use MemoryStore for development
+  app.use(
+    session({
+      secret: process.env.SESSION_SECRET,
+      resave: false,
+      saveUninitialized: true,
+    })
+  );
+}
 
 
 
