@@ -1,0 +1,8 @@
+node_modules/
+.env
+*.log
+*.tmp
+.vscode/
+.idea/
+*.pid
+coverage/
