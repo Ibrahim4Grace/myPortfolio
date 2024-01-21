@@ -6,6 +6,7 @@ const express = require('express');
 const session = require('express-session');
 const flash = require('connect-flash');
 const morgan = require('morgan');
+const nodemon = require('nodemon');
 const ejs = require('ejs');
 
 const app = express();
