@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
               enquiryForm.style.display = "none";
               thankYouMessage.style.display = "block";
               enquiryForm.reset();
+              return false; // Prevent further processing and displaying the JSON response
           } else {
               console.error('Error:', response.statusText);
               // Handle error cases, e.g., display an error message to the user
