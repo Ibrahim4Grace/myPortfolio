@@ -19,25 +19,20 @@
 //   });
   
 
-
-// Wait for the page to load
 document.addEventListener("DOMContentLoaded", function () {
   const enquiryForm = document.getElementById("enquiryForm");
   const thankYouMessage = document.getElementById("thankYouMessage");
 
-  // Add an event listener to the form submission
   enquiryForm.addEventListener("submit", async function (event) {
-      event.preventDefault(); // Prevent the default form submission behavior
+      event.preventDefault();
 
       try {
-          // Use Fetch API to make an asynchronous request to the server
           const response = await fetch('/contactPost', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                  // ... your form data
                   name: document.getElementById('name').value,
                   email: document.getElementById('email').value,
                   subject: document.getElementById('subject').value,
@@ -46,8 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
 
           if (response.ok) {
-              // Update the URL and display the thank-you message
-              window.history.pushState({}, document.title, '/');
+              const responseData = await response.json();
               enquiryForm.style.display = "none";
               thankYouMessage.style.display = "block";
               enquiryForm.reset();
