@@ -19,7 +19,8 @@ const app = express();
 app.set(`view engine`, `ejs`);
 
 //TO BE ABLE TO ACCESS OUR STATIC FILES -- IMG, CSS, VIDEOS
-app.use(express.static(`public`))
+// app.use(express.static(`public`))
+app.use(express.static(__dirname + "/public/"));
 app.use(express.urlencoded({ extended: false }));
 
 
