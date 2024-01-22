@@ -11,6 +11,13 @@ const ejs = require('ejs');
 
 const app = express();
 
+// Set no-cache headers middleware
+app.use((req, res, next) => {
+  res.header('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  res.header('Pragma', 'no-cache');
+  next();
+});
+
 
  app.set('views', __dirname + '/views')
 
