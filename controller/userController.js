@@ -21,41 +21,42 @@ const transporter = nodemailer.createTransport({
     res.render('index'); 
 };
  
-const sendEmail = (name, email, subject, message) => {
-    const msg = `
-      <p>Dear Korede Agboola, You have a new message from your portfolio site.</p>
-      <p>Here is the sender information:</p>
-      <ul>
-          <li>Full Name: ${name}</li>
-          <li>Email: ${email}</li>
-          <li>Subject: ${subject}</li>
-          <li>Message: ${message}</li>
-      </ul>
-      <p>Best regards</p>
-    `;
-  
-    const mailOptions = {
-      from: process.env.NODEMAILER_EMAIL,
-      to: process.env.DESTINATION_EMAIL,
-      subject: 'New Message from your Portfolio!',
-      html: msg,
-    };
-  
-    return transporter.sendMail(mailOptions);
-  };
-  
-  const contactPost = async (req, res) => {
-    try {
+const contactPost = async (req, res) => {
+  try {
       const { name, email, subject, message } = req.body;
-  
+
+      // Build email message
+      const msg = `
+          <p>Dear Korede Agboola, You have a new message from your portfolio site.</p>
+          <p>Here is the sender information:</p>
+          <ul>
+              <li>Full Name: ${name}</li>
+              <li>Email: ${email}</li>
+              <li>Subject: ${subject}</li>
+              <li>Message: ${message}</li>
+          </ul>
+          <p>Best regards</p>
+      `;
+
+      // Configure email options
+      const mailOptions = {
+          from: process.env.NODEMAILER_EMAIL,
+          to: process.env.DESTINATION_EMAIL,
+          subject: 'New Message from your Portfolio!',
+          html: msg,
+      };
+
       // Send email
-      await sendEmail(name, email, subject, message);
+      await transporter.sendMail(mailOptions);
       console.log('Email sent successfully');
-    } catch (err) {
+  } catch (err) {
       console.error('Error:', err);
+
+      // Respond to the client with an error status
       res.status(500).send('Internal Server Error');
-    }
-  };
+  }
+};
+
   
 module.exports = ({ myPortfolio, contactPost});
 
