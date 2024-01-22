@@ -49,6 +49,8 @@ const contactPost = async (req, res) => {
       // Send email
       await transporter.sendMail(mailOptions);
       console.log('Email sent successfully');
+        // End the response
+    res.status(200).send('Email sent successfully');
   } catch (err) {
       console.error('Error:', err);
 
