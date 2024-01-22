@@ -4,7 +4,6 @@ if (process.env.NODE_ENV !== 'production'){
 
 const express = require('express');
 const session = require('express-session');
-const flash = require('connect-flash');
 const morgan = require('morgan');
 const nodemon = require('nodemon');
 const ejs = require('ejs');
@@ -49,16 +48,6 @@ if (process.env.NODE_ENV === 'production') {
   );
 }
 
-
-
-     //creating global variable for color changing
-app.use(flash())
-app.use((req, res, next) => {
-  res.locals.success_msg = req.flash('success_msg');
-  res.locals.error_msg = req.flash('error_msg');
-  res.locals.error = req.flash('error');
-  next();
-});
 
 
 app.use(morgan('tiny'));
