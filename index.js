@@ -18,14 +18,14 @@ app.use((req, res, next) => {
   next();
 });
 
-const trustedOrigins = [process.env.BASE_URL];
-app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? trustedOrigins : '*',
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],
-}));
+// const trustedOrigins = [process.env.BASE_URL];
+// app.use(cors({
+//   origin: process.env.NODE_ENV === 'production' ? trustedOrigins : '*',
+//   credentials: true,
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],
+// }));
 
 
  app.set('views', __dirname + '/views')
