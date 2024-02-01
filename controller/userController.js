@@ -59,7 +59,11 @@ const contactPost = async (req, res) => {
   }
 };
 
+const projectDeatils = (req, res) => {
+    res.render('details'); 
+};
+
   
-module.exports = ({ myPortfolio, contactPost});
+module.exports = ({ myPortfolio, contactPost,projectDeatils});
 
 

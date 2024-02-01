@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Korex Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.jpg" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <%- include (`partials/header`); -%>
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol style="float: left;">
+            <li><a href="/">Home</a></li>
+            <li>Project Details</li>
+          </ol>
+        </div>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/portfolio/hospital.jpg" class="img-slide"  alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/portfolio/hospital.jpg" class="img-slide"  alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="portfolio-description">
+              <h2>WELCOME TO MY Doctor Management System</h2>
+              <p>
+                The Doctor Management System is a web application designed for managing doctors' information and appointments at a medical institution, specifically designed for Korex Hospital. This system helps in organizing, updating, and retrieving doctor-related data efficiently. It also provides a platform for patients to schedule appointments with their doctors.
+              </p>
+            </div>
+            
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Project date</strong>: 01 Nov, 2023</li>
+                <li><strong>Project URL</strong>:
+                   <a href="https://korexhospital-gx4e.onrender.com" target="_blank">korexhospital.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Technologies Used</h2>
+              <p>
+                <ul>
+                  <li>JavaScript</li>
+                  <li>NodeJs</li>
+                  <li>ExpressJs</li>
+                  <li>MongoDB</li>
+                  <li>PassportJs</li>
+                  <li>BcryptJs</li>
+                  <li>Nodemailer</li>
+                  <li>JWT</li>
+                  <li>EJS</li>
+                  <LI>pdfkit</LI>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+  <%- include (`partials/footer`); -%>
+</body>
+
+</html>
