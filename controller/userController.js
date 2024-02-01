@@ -50,7 +50,8 @@ const contactPost = async (req, res) => {
       await transporter.sendMail(mailOptions);
       console.log('Email sent successfully');
         // Send a success response to the client
-        res.status(200).json({ success: true, message: 'Email sent successfully' })
+        // res.status(200).json({ success: true, message: 'Email sent successfully' })
+        res.status(200).redirect('/');
   } catch (err) {
       console.error('Error:', err);
 
@@ -63,7 +64,11 @@ const projectDeatils = (req, res) => {
     res.render('details'); 
 };
 
+const estateDetails = (req, res) => {
+    res.render('estateDetails');   
+};
+
   
-module.exports = ({ myPortfolio, contactPost,projectDeatils});
+module.exports = ({ myPortfolio, contactPost,projectDeatils,estateDetails});
 
 
