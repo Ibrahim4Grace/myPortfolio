@@ -68,7 +68,12 @@ const estateDetails = (req, res) => {
     res.render('estateDetails');   
 };
 
+const logisticDetails = (req, res) => {
+    res.render('logisticDetails');   
+};
+
+
   
-module.exports = ({ myPortfolio, contactPost,projectDeatils,estateDetails});
+module.exports = ({ myPortfolio, contactPost,projectDeatils,estateDetails,logisticDetails});
 
 

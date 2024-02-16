@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Korex Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.jpg" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <%- include (`partials/header`); -%>
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol style="float: left;">
+            <li><a href="/">Home</a></li>
+            <li>Project Details</li>
+          </ol>
+        </div>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/portfolio/logistic.jpg" class="img-slide"  alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/portfolio/logistic.jpg" class="img-slide"  alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="portfolio-description">
+              <h2>Welcome to my Logistic System!</h2>
+              <p>
+                Welcome to our logistic system! Our platform provides a comprehensive solution for users to manage their shipping needs conveniently and efficiently. With features such as account registration, payment processing, label creation, package tracking, shipping history, real-time chat support, and PDF receipt generation, our platform offers a seamless experience for both users and administrators, and receive notifications via email using the power of Nodemailer.
+              </p>
+
+                 <strong>Features:</strong> 
+                <div>
+                  <b>Account Registration:</b> Users can easily register an account to access the full range of features offered by our platform.<br>
+                  <b>Payment Processing:</b> Secure payment processing allows users to make payments for their shipping needs with ease.<br>
+                  <b>Label Creation:</b> Users can generate shipping labels directly from our platform, simplifying the shipping process.<br>
+                  <b>Package Tracking:</b> Real-time package tracking enables users to monitor the status and location of their packages online.<br>
+                  <b>Shipping History:</b> Users can view their complete shipping history, including past shipments and delivery details.<br>
+                  <b>Real-Time Chat Support:</b> Our integrated chat feature enables users to communicate with administrators in real-time using Socket.IO.<br>
+                  <b>PDF Receipt Generation:</b> users can download a PDF receipt containing detailed information about their shipment.<br>
+                  <b>Email Notifications:</b> Receive notifications in your email inbox using Nodemailer.
+                </div>
+            </div>
+            
+          </div>
+    
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web development</li>
+                <li><strong>Project date</strong>: 16 Feb, 2024</li>
+                <li><strong>Project URL</strong>:
+                   <a href="https://korexlogistic.onrender.com/" target="_blank">korexlogistic.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Technologies Used</h2>
+              <p>
+                <ul>
+                  <li>Javascript, EJS </li>
+                  <li>HTML, CSS</li>
+                  <li>ExpressJs</li>
+                  <li>JSON Web Tokens</li>
+                  <li>MongoDB</li>
+                  <li>PassportJs</li>
+                  <li>BcryptJs</li>
+                  <li>Nodemailer</li>
+                  <li>Socket.IO</li>
+                  <li>PDFKit</li>
+                  <li>Nodemailer</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+  <%- include (`partials/footer`); -%>
+</body>
+
+</html>
