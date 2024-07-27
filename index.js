@@ -64,7 +64,7 @@ app.use(morgan('tiny'));
 app.disable('x-powered-by'); //less hacker know about our stack
 
 // ROUTES
-app.use('/api/v1', require('./route/userRoute'));
+app.use('/', require('./route/userRoute'));
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server started on port ${port}`));
