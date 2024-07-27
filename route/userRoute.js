@@ -13,7 +13,7 @@ const {
 
 router.get('/', myPortfolio);
 router.post('/contactPost', contactPost);
-router.get('/details', projectDeatils);
+router.get('/auto-Rentals', projectDeatils);
 router.get('/estateDetails', estateDetails);
 router.get('/logisticDetails', logisticDetails);
 router.get('/ecommerceDetails', ecommerceDetails);

@@ -57,7 +57,7 @@ const contactPost = async (req, res) => {
 };
 
 const projectDeatils = (req, res) => {
-  res.render('details');
+  res.render('auto-Rentals');
 };
 
 const estateDetails = (req, res) => {
