@@ -17,22 +17,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// const trustedOrigins = [process.env.BASE_URL];
-// app.use(cors({
-//   origin: process.env.NODE_ENV === 'production' ? trustedOrigins : '*',
-//   credentials: true,
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   allowedHeaders: ['Content-Type', 'Authorization'],
-//   exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],
-// }));
-
 app.set('views', __dirname + '/views');
 
 // TO CALL OUR EJS
 app.set(`view engine`, `ejs`);
 
-//TO BE ABLE TO ACCESS OUR STATIC FILES -- IMG, CSS, VIDEOS
-// app.use(express.static(`public`))
 app.use(express.static(__dirname + '/public/'));
 app.use(express.urlencoded({ extended: false }));
 
