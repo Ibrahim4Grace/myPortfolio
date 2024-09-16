@@ -10,7 +10,6 @@ const ejs = require('ejs');
 
 const app = express();
 
-// Set no-cache headers middleware
 app.use((req, res, next) => {
   res.header('Cache-Control', 'no-store, no-cache, must-revalidate, private');
   res.header('Pragma', 'no-cache');
@@ -19,14 +18,12 @@ app.use((req, res, next) => {
 
 app.set('views', __dirname + '/views');
 
-// TO CALL OUR EJS
 app.set(`view engine`, `ejs`);
 
 app.use(express.static(__dirname + '/public/'));
 app.use(express.urlencoded({ extended: false }));
 
 if (process.env.NODE_ENV === 'production') {
-  // Use a placeholder store for production (replace it with a suitable store)
   const MemoryStore = require('memorystore')(session);
   app.use(
     session({
@@ -34,12 +31,11 @@ if (process.env.NODE_ENV === 'production') {
       resave: false,
       saveUninitialized: true,
       store: new MemoryStore({
-        checkPeriod: 86400000, // Prune expired entries every 24h
+        checkPeriod: 86400000,
       }),
     })
   );
 } else {
-  // Use MemoryStore for development
   app.use(
     session({
       secret: process.env.SESSION_SECRET,
@@ -50,9 +46,8 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use(morgan('tiny'));
-app.disable('x-powered-by'); //less hacker know about our stack
+app.disable('x-powered-by');
 
-// ROUTES
 app.use('/', require('./route/userRoute'));
 
 const port = process.env.PORT || 3000;

@@ -76,6 +76,10 @@ const carRentalDetails = (req, res) => {
   res.render('carRentalDeatails');
 };
 
+const homeworkDetails = (req, res) => {
+  res.render('homeworkDetails');
+};
+
 module.exports = {
   myPortfolio,
   contactPost,
@@ -84,4 +88,5 @@ module.exports = {
   logisticDetails,
   ecommerceDetails,
   carRentalDetails,
+  homeworkDetails,
 };

@@ -9,6 +9,7 @@ const {
   logisticDetails,
   ecommerceDetails,
   carRentalDetails,
+  homeworkDetails,
 } = require('../controller/userController');
 
 router.get('/', myPortfolio);
@@ -18,4 +19,5 @@ router.get('/estateDetails', estateDetails);
 router.get('/logisticDetails', logisticDetails);
 router.get('/ecommerceDetails', ecommerceDetails);
 router.get('/carRentalDeatails', carRentalDetails);
+router.get('/homeworkDetails', homeworkDetails);
 module.exports = router;
