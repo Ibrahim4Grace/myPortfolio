@@ -10,6 +10,7 @@ const {
   ecommerceDetails,
   carRentalDetails,
   homeworkDetails,
+  hornetDetails,
 } = require('../controller/userController');
 
 router.get('/', myPortfolio);
@@ -20,4 +21,5 @@ router.get('/logisticDetails', logisticDetails);
 router.get('/ecommerceDetails', ecommerceDetails);
 router.get('/carRentalDeatails', carRentalDetails);
 router.get('/homeworkDetails', homeworkDetails);
+router.get('/horznet-techenologies', hornetDetails);
 module.exports = router;

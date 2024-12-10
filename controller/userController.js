@@ -80,6 +80,10 @@ const homeworkDetails = (req, res) => {
   res.render('homeworkDetails');
 };
 
+const hornetDetails = (req, res) => {
+  res.render('horznet-techenologies');
+};
+
 module.exports = {
   myPortfolio,
   contactPost,
@@ -89,4 +93,5 @@ module.exports = {
   ecommerceDetails,
   carRentalDetails,
   homeworkDetails,
+  hornetDetails,
 };

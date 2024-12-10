@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Korex Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.jpg" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <%- include (`partials/header`); -%>
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <ol style="float: left;">
+            <li><a href="/">Home</a></li>
+            <li>Project Details</li>
+          </ol>
+        </div>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/portfolio/Horznet.jpg" class="img-slide"  alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/portfolio/Horznet.jpg" class="img-slide"  alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="portfolio-description">
+                <h2>Online Learning & Certification Platform</h2>
+                <p>
+                    The platform provides students with a seamless way to purchase registration pins and course, enroll in online courses, and gain expertise in various fields such as Cybersecurity, Data Networking, Programming, and Enterprise Networking. It also offers certification upon successful completion of exams.
+                </p>
+            
+                <strong>Features:</strong> 
+                <div>
+                    <b>Paystack Payment Integration:</b> A secure and reliable payment system enabling students to purchase registration pins with ease.<br>
+            
+                    <b>Secure Pin-based Registration:</b> Students purchase pins to register on the platform and access their personalized learning portal.<br>
+            
+                    <b>Comprehensive Online Courses:</b> Includes detailed modules on Cybersecurity, Data Networking, Programming, and Enterprise Networking.<br>
+            
+                    <b>Interactive Learning Environment:</b> Courses feature video lectures, downloadable resources, and quizzes to enhance learning.<br>
+            
+                    <b>Student Dashboard:</b> Students can track their course progress, manage enrolled courses, and prepare for exams.<br>
+            
+                    <b>Examination and Certification:</b> Students can write exams upon completing courses and receive certificates instantly after passing.<br>
+            
+                    <b>Automated Certificate Generation:</b> Certificates are auto-generated and available for download immediately upon course completion.<br>
+            
+                    <b>User-friendly Admin Dashboard:</b> Admins can manage course content, monitor student progress, oversee platform activities, and track payments.<br>
+                </div>
+            </div>
+            
+            
+          </div>
+    
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web development</li>
+                <li><strong>Project date</strong>: 10 December, 2024</li>
+                <li><strong>Project URL</strong>:
+                    <a href="https://horznettechnologies.vercel.app/" target="_blank">Horznet Technologies</a>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Technologies Used</h2>
+              <p>
+                <ul>
+                  <li>Javascript </li>
+                  <li>NodeJs </li>
+                  <li>ExpressJs</li>
+                  <li>Mongodb</li>
+                  <li>Paystack</li>
+                  <li>Redis</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+  <%- include (`partials/footer`); -%>
+</body>
+
+</html>
