@@ -84,6 +84,10 @@ const hornetDetails = (req, res) => {
   res.render('horznet-techenologies');
 };
 
+const financeDetails = (req, res) => {
+  res.render('finance-logger');
+};
+
 module.exports = {
   myPortfolio,
   contactPost,
@@ -94,4 +98,5 @@ module.exports = {
   carRentalDetails,
   homeworkDetails,
   hornetDetails,
+  financeDetails,
 };
